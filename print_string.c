@@ -3,11 +3,11 @@
 
 /**
  * print_string - prints a string of characters
- * @str: list of arguments
+ * @args: list of arguments
  *
  * Return: number of characters printed
  */
-int print_string (va_list str)
+int print_string (va_list args)
 {
     int count = 0;
     char *str = va_arg(args, char *);
