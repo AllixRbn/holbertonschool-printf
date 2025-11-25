@@ -7,7 +7,7 @@
  */
 int print_percentage(va_list args)
 {
-    (void)args
+    (void)args;
     /* This parameter is unused since it's only to print the % symbol.
     * But in order to maintain a consistency throughout the printf function
     * we still add this parameter.*/
