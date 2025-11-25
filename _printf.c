@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while (format[i] != NULL)
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			break;
 		}
 
-		count += handle_format(format[i], args);
+		count += choose_function(format[i], args);
 		{
 		i++;
 		}
