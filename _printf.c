@@ -19,25 +19,25 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
-		{
-			count++;
-		}
-		else
+		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			count++;
 		}
-
-		if (format[i] == '\0')
+		else
 		{
-			break;
+			i++;
+
+			if (format[i] == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
+
+			count += choose_function(format[i], args);
 		}
 
-		count += choose_function(format[i], args);
-		{
 		i++;
-		}
 	}
 
 	va_end(args);
