@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *choose_function - selects the appropriate print function based on format specifier
@@ -9,7 +10,7 @@
 */
 int choose_function(char spec, va_list args)
 {
-	int i;
+	int i = 0;
 	printer_t formats[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -17,10 +18,13 @@ int choose_function(char spec, va_list args)
 		{'\0', NULL}
 	};
 
-	for (i = 0; formats[i].spec != '\0'; i++)
+	while (formats[i].symbol != '\0')
 	{
-		if (formats[i].spec == spec)
-			return (formats[i].func(args));
+		if (formats[i].symbol == spec)
+		{
+			return (formats[i].print(args));
+		}
+		i++;
 	}
 
 	_putchar('%');
