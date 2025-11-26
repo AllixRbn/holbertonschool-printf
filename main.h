@@ -8,6 +8,7 @@ int print_char(va_list args);
 int print_string (va_list str);
 int print_percentage(va_list args);
 int choose_function(char spec, va_list args);
+int print_int(va_list args);
 int _printf(const char *format, ...);
 
 
