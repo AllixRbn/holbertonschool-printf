@@ -85,7 +85,8 @@ command to access the program manual
 man ./man_3_printf
 ```
 
-## Flowcharts
+## Flowchart
+![Flowchart](<img width="1900" height="1591" alt="Image" src="https://github.com/user-attachments/assets/e0cc6689-4ab0-4c6c-8163-8492e3004178" />)
 
 
 
