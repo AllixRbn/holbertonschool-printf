@@ -43,7 +43,7 @@ Recreate a basic version of `printf` in C, using :
 
 - Add useful commentary
 
-- Use simple names for your variables and functions
+- Use simple names for your variables and function.
 
 ## Installation & compilation 
 
@@ -77,8 +77,18 @@ The compiler will rename your file as 'a.out', so you have to run this command
 ```bash
   ./a.out
 ```
+## Manual
+
+command to access the program manual
+
+```bash
+man ./man_3_printf
+```
+
+## Flowcharts
+
 
 
 ## Authors
-- [@Alix](https://github.com/AllixRbn)
+- [@Allix](https://github.com/AllixRbn)
 - [@Benjamin](https://github.com/benji3106)
