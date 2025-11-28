@@ -1,0 +1,75 @@
+.TH _printf 3
+
+
+.Dd 11/26/2025
+.Dt _printf
+.Os Darwin
+.Sh NAME
+.Nm _printf
+.Nd function to do formatted printing in C.
+.Sh SYNOPSIS
+#include "main.h"
+
+int print_int(va_list args);
+
+.Sh DESCRIPTION
+The _printf function in C is designed to format text and writes it to standard output.
+This is a simplified version of the printf function in C.
+
+Thanks to various specifiers, indicated with a % at the beginning, the following are supported :
+.Pp
+.Bl -tag -width -indent
+.It %c
+prints a single character
+.It %s
+prints a string of characters
+.It %%
+prints a percent symbol
+.It %i
+prints an integer
+.It %d
+prints an integer (same as i)
+.El
+.Pp
+
+.Sh EXAMPLES
+.Pp
+.Bl -tag -width -indent
+.It _printf("Character : %c\n", 'H');
+=> Character : H
+.It _printf("String : %s\n", "Hello");
+=> String : Hello
+.It _printf("Percent : %%\n", %);
+=> Percent : %
+.It _printf("Int i : %i\n", -5678);
+=> Int i : -5678
+.It _printf("Int d : %d\n", 1234);
+=> Int d : 1234
+.El
+.Pp
+.Sh FILES
+.Pp
+.Bl -tag -width -indent
+.It main.h
+=> header file containing the prototype and structures.
+.It _putchar.c
+=> writes the character c to stdout.
+.It print_char.c
+=> prints a character.
+.It print_percentage.c
+=> prints a percentage symbol.
+.It print_string.c
+=> prints a string of characters.
+.It print_int.c
+=> prints an integer.
+.It choose_function.c
+=> selects the appropriate print function based on format specifier.
+.It _printf.c
+=> produces output according to a format.
+.El
+.Pp
+.Sh BUGS
+Only currently supports %c, %s, %%, %i and %d specifiers.
+.Sh AUTHORS
+.Pp
+Written by Allix Robin and Benjamin Bommier.
